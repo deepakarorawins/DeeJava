@@ -8,5 +8,35 @@
     <artifactId>dee-java</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>7.0.0</version>
+        <!-- These comes with java-client but causing issues so we are resolving
+            separately -->
+        <exclusions>
+            <exclusion>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-support</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-api</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.0</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
